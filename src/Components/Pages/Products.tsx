@@ -12,7 +12,14 @@ interface Catalog{
     }
 }
 
-const Products:FC = () => {
+interface Props{
+    updateCart: {
+        item1: string,
+        item2: string
+    }
+}
+
+const Products:FC<Props> = ( { updateCart } ) => {
     const arrayofObjects: Catalog[] = catalog();
 
     return (
@@ -24,7 +31,7 @@ const Products:FC = () => {
                             <img className='productImg' src={require(`Images/${value.img}`)} alt='product' height='100px' width='100px'></img>
                             <div>{value.description}</div>
                             <div>$ {value.price}</div>
-                            <button>Add to Cart</button>
+                            <button onClick={() => {updateCart}}>Add to Cart</button>
                         </div>
                     )
                 })
