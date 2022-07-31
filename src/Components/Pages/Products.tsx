@@ -1,23 +1,30 @@
 import React, { FC } from 'react';
-import Catalog from '../../Assets/catalog.json';
+import catalog from 'Assets/catalog'
 
-interface catalogArray{
+interface Catalog{
     id: number,
-    description: string
+    description: string,
     price: number,
+    img: string,
+    test?: {
+        pizza: boolean,
+        toppings: boolean
+    }
 }
 
 const Products:FC = () => {
-    let catalog: any = Catalog;
+    const arrayofObjects: Catalog[] = catalog();
 
-    console.log(Catalog);
     return (
-        <div id="main">
+        <div id="productPage">
             {
-                Object.entries(catalog).map(([key, value]) => {
+                Object.entries(arrayofObjects).map(([key, value]) => {
                     return(
-                        <div>
-                            {value.description} {key} {value.price}
+                        <div className='products' key={key}>
+                            <img className='productImg' src={require(`Images/${value.img}`)} alt='product' height='100px' width='100px'></img>
+                            <div>{value.description}</div>
+                            <div>$ {value.price}</div>
+                            <button>Add to Cart</button>
                         </div>
                     )
                 })

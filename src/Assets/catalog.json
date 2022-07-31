@@ -2,7 +2,11 @@
     {
         "id": 0,
         "description": "test",
-        "price": 1.99
+        "price": 1.99,
+        "test": {
+            "pizza": true,
+            "toppings": false
+        }
     },
     {
         "id": 1,
