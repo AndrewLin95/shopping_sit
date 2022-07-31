@@ -18,7 +18,9 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    // added this to solve the issue with importing react
+    "DISABLE_NEW_JSX_TRANSFORM": true
   },
   "include": [
     "src"

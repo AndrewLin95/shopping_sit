@@ -1,10 +1,18 @@
-import './App.css';
-import Home from './Components/Home';
+import React from 'react';
+import './Styling/App.css';
+import './Styling/Reset.css'
+import Header from "./Components/Header";
+import RouteSwitch from './RouteSwitch';
+import Footer from './Components/Footer';
 
-const App = () => {
-  return (
-    <Home/>
-  )
+function App(){
+    return(
+        <>
+            <Header />
+            <RouteSwitch />
+            <Footer />
+        </>
+    )
 }
 
 export default App;
