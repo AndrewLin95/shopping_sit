@@ -12,12 +12,12 @@ body{
     display: flex;
     flex-direction: row;
     height: 10vh;
-    width: 100vw;
+    width: 90vw;
     background-color: black;
     justify-content: space-between;
     align-items: center;
-    padding-left: 5em;
-    padding-right: 5em;
+    padding-left: 5vw;
+    padding-right: 5vw;
 }
 
 #navBar{
@@ -118,3 +118,18 @@ a, a:visited, a:active {
     height: 50px;
 }
 
+#cartSpacer{
+    margin-top: 1em;
+    background: purple;
+    height: 0.25em;
+}
+
+#cartTotalPrice{
+    display: flex;
+    justify-content: space-between;
+}
+
+#cartPriceValue{
+    position: relative;
+    right: 5.3em;
+}
