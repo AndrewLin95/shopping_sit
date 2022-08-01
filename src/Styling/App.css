@@ -66,3 +66,55 @@ a, a:visited, a:active {
     text-align: center;
 }
 
+#cartPage{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    padding-top: 1em;
+}
+
+#cartHeader{
+    display: flex;
+    justify-content: space-around;
+}
+
+#cartItemHeader{
+    position: relative;
+    left: 7em;
+}
+
+#cartPriceHeader{
+    position: relative;
+    left: 7.9em;
+}
+
+#cartQuantityHeader{
+    position: relative;
+    left: 2.6em;
+}
+
+.cart{
+    display: flex;
+    height: 50px;
+    width: 400px;
+    border: 1px solid black;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.cartDescription{
+    width: 150px;
+}
+
+.large{
+    width: 100px;
+    height: 100px;
+}
+
+.small{
+    width: 50px;
+    height: 50px;
+}
+

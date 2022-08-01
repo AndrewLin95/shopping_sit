@@ -16,16 +16,16 @@ interface Props{
     updateCart: (arg1: string, arg2: number, arg3: string, arg4: number) => void
 }
 
-const Products:FC<Props> = ( { updateCart } ) => {
+const Products:FC<Props> = ({ updateCart }) => {
     const arrayofObjects: Catalog[] = catalog();
 
     return (
-        <div id="productPage">
+        <div id='productPage'>
             {
                 Object.entries(arrayofObjects).map(([key, value]) => {
                     return(
                         <div className='products' key={key}>
-                            <img className='productImg' src={require(`Images/${value.img}`)} alt='product' height='100px' width='100px'></img>
+                            <img className='productImg large' src={require(`Images/${value.img}`)} alt='product'></img>
                             <div>{value.description}</div>
                             <div>$ {value.price}</div>
                             <button onClick={() => {updateCart(value.description, value.price, value.img, value.id)}}>Add to Cart</button>
