@@ -10,6 +10,7 @@ import './Styling/App.css';
 import './Styling/Reset.css'
 
 interface Obj{
+    id: number,
     description: string,
     price: number,
     img: string,
@@ -23,23 +24,33 @@ const RouteSwitch:FC = () => {
 
     // TODO: add total quantity. Add button to remove each item (quantity of each item?) Home page. Animation or popup for when adding item to cart
 
-    const updateCart = ( descriptionValue: string, priceValue: number, image: string, id: number ) => {
+    const updateCart = ( descriptionValue: string, priceValue: number, image: string, idValue: number ) => {
         const tempCart: {[id: number] : Obj} = cart;
         let tempPrice = price;
-        if (id in tempCart){
-            tempCart[id].quantity ++;
-            useCart(tempCart);
+        if (idValue in tempCart){
+            tempCart[idValue].quantity ++;
         } else {
-            tempCart[id] = {
+            tempCart[idValue] = {
+                id: idValue,
                 description: descriptionValue,
                 price: priceValue,
                 img: image,
                 quantity: 1
             };
-            useCart(tempCart);
         }
+        useCart(tempCart);
         tempPrice += priceValue;
         usePrice(Math.round(tempPrice*1000)/1000);
+    }
+
+    const removeItem = ( id: number ) => {
+        const tempCart: {[id: number]: Obj} = cart;
+        if (tempCart[id].quantity === 1){
+            delete tempCart[id];
+        } else {
+            tempCart[id].quantity --;
+        }
+        useCart(tempCart);
     }
 
     useEffect(()=>{
@@ -55,7 +66,7 @@ const RouteSwitch:FC = () => {
                     <Route path="/" element={<Home/>} />
                     <Route path="/products" element={<Products updateCart={updateCart}/>} />
                     <Route path="/contacts" element={<Contacts/>} />
-                    <Route path="/cart" element={<Cart cart={cart} price={price}/>}/>
+                    <Route path="/cart" element={<Cart cart={cart} price={price} removeItem={removeItem}/>}/>
                 </Routes>
             <Footer/>
             </BrowserRouter>

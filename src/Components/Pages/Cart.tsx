@@ -11,9 +11,10 @@ interface Obj{
 interface Props{
    cart: Obj,
    price: number,
+   removeItem: (arg1: number) => void
 }
 
-const Cart:FC<Props> = ({ cart, price }) => {
+const Cart:FC<Props> = ({ cart, price, removeItem }) => {
 
     return (
         <div id='cartPage'>
@@ -29,7 +30,7 @@ const Cart:FC<Props> = ({ cart, price }) => {
                         <div className='cartDescription'>{value.description}</div>
                         <div>$ {value.price}</div>
                         <div>{value.quantity} </div>
-                        <button>Remove</button>
+                        <button onClick={() => {removeItem(value.id)}}>Remove</button>
                     </div>
                 )
             })}
