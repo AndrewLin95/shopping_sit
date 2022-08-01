@@ -29,6 +29,7 @@ const Cart:FC<Props> = ({ cart, price }) => {
                         <div className='cartDescription'>{value.description}</div>
                         <div>$ {value.price}</div>
                         <div>{value.quantity} </div>
+                        <button>Remove</button>
                     </div>
                 )
             })}

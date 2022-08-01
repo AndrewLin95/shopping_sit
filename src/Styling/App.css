@@ -80,23 +80,23 @@ a, a:visited, a:active {
 
 #cartItemHeader{
     position: relative;
-    left: 7em;
+    left: 5.5em;
 }
 
 #cartPriceHeader{
     position: relative;
-    left: 7.9em;
+    left: 4.5em;
 }
 
 #cartQuantityHeader{
     position: relative;
-    left: 2.6em;
+    right: 2.1em;
 }
 
 .cart{
     display: flex;
     height: 50px;
-    width: 400px;
+    width: 450px;
     border: 1px solid black;
     justify-content: space-around;
     align-items: center;
@@ -131,5 +131,5 @@ a, a:visited, a:active {
 
 #cartPriceValue{
     position: relative;
-    right: 5.3em;
+    right: 9.8em;
 }

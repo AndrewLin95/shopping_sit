@@ -21,8 +21,7 @@ const RouteSwitch:FC = () => {
     const [cart, useCart] = useState<{[key: string]: any}>({});
     const [price, usePrice] = useState<number>(0);
 
-    // 1) have cart show each item. Each item to include picture, price of each, description and quantity
-    // 2) show sum of prices at the bottom. Can use a separate state for this
+    // TODO: add total quantity. Add button to remove each item (quantity of each item?) Home page. Animation or popup for when adding item to cart
 
     const updateCart = ( descriptionValue: string, priceValue: number, image: string, id: number ) => {
         const tempCart: {[id: number] : Obj} = cart;
