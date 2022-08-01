@@ -19,14 +19,14 @@ interface Obj{
 const RouteSwitch:FC = () => {
 
     const [cart, useCart] = useState<{[key: string]: any}>({});
-    const [price, usePrice] = useState();
+    const [price, usePrice] = useState<number>(0);
 
     // 1) have cart show each item. Each item to include picture, price of each, description and quantity
     // 2) show sum of prices at the bottom. Can use a separate state for this
 
     const updateCart = ( descriptionValue: string, priceValue: number, image: string, id: number ) => {
         const tempCart: {[id: number] : Obj} = cart;
-        console.log(tempCart);
+        let tempPrice = price;
         if (id in tempCart){
             tempCart[id].quantity ++;
             useCart(tempCart);
@@ -39,11 +39,14 @@ const RouteSwitch:FC = () => {
             };
             useCart(tempCart);
         }
+        tempPrice += priceValue;
+        usePrice(Math.round(tempPrice*1000)/1000);
     }
 
     useEffect(()=>{
         console.log(cart);
-    }, [cart])
+        console.log(price);
+    }, [cart, price])
 
     return (
         <>
@@ -53,7 +56,7 @@ const RouteSwitch:FC = () => {
                     <Route path="/" element={<Home/>} />
                     <Route path="/products" element={<Products updateCart={updateCart}/>} />
                     <Route path="/contacts" element={<Contacts/>} />
-                    <Route path="/cart" element={<Cart cart={cart}/>}/>
+                    <Route path="/cart" element={<Cart cart={cart} price={price}/>}/>
                 </Routes>
             <Footer/>
             </BrowserRouter>

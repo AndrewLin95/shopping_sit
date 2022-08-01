@@ -9,10 +9,11 @@ interface Obj{
 }
 
 interface Props{
-   [key: string]: Obj
+   cart: Obj,
+   price: number,
 }
 
-const Cart:FC<Props> = ({ cart }) => {
+const Cart:FC<Props> = ({ cart, price }) => {
 
     return (
         <div id='cartPage'>
@@ -31,9 +32,10 @@ const Cart:FC<Props> = ({ cart }) => {
                     </div>
                 )
             })}
-            <div>
+            <div id='cartSpacer'></div>
+            <div id='cartTotalPrice'>
                 <div>Total Price:</div>
-                <div></div>
+                <div id='cartPriceValue'>$ {price}</div>
             </div>
         </div>
     )
