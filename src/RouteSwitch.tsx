@@ -9,6 +9,13 @@ import Footer from "Components/Footer";
 import './Styling/App.css';
 import './Styling/Reset.css'
 
+interface Obj{
+    description: string,
+    price: number,
+    img: string,
+    quantity: number
+}
+
 const RouteSwitch:FC = () => {
 
     const [cart, useCart] = useState({});
@@ -17,12 +24,21 @@ const RouteSwitch:FC = () => {
     // 1) have cart show each item. Each item to include picture, price of each, description and quantity
     // 2) show sum of prices at the bottom. Can use a separate state for this
 
-    const updateCart = () => {
-        const obj = {item1: "teas", item2: "coconut"};
+    const updateCart = ( descriptionValue: string, priceValue: number, image: string, id: number ) => {
+        const tempCart = cart;
+        const obj: {[id: number] : Obj } = {};  
+        obj[id] = {
+            description: descriptionValue,
+            price: priceValue,
+            img: image,
+            quantity: 1
+        };
+        if (id in tempCart){
+            console.log(obj[id].quantity)
+        }
         useCart(obj);
+        console.log(cart);
     }
-
-    const obj = {item1: "teas", item2: "coconut"};
 
     return (
         <>
@@ -30,7 +46,7 @@ const RouteSwitch:FC = () => {
             <BrowserRouter>
                 <Routes> 
                     <Route path="/" element={<Home/>} />
-                    <Route path="/products" element={<Products updateCart={obj}/>} />
+                    <Route path="/products" element={<Products updateCart={updateCart}/>} />
                     <Route path="/contacts" element={<Contacts/>} />
                     <Route path="/cart" element={<Cart/>}/>
                 </Routes>
