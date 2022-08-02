@@ -22,7 +22,7 @@ const RouteSwitch:FC = () => {
     const [cart, useCart] = useState<{[key: string]: any}>({});
     const [price, usePrice] = useState<number>(0);
 
-    // TODO: add total quantity. Add button to remove each item (quantity of each item?) Home page. Animation or popup for when adding item to cart
+    // TODO: add total quantity. Home page. Animation or popup for when adding item to cart
 
     const updateCart = ( descriptionValue: string, priceValue: number, image: string, idValue: number ) => {
         const tempCart: {[id: number] : Obj} = cart;
@@ -44,7 +44,7 @@ const RouteSwitch:FC = () => {
     }
 
     const removeItem = ( id: number ) => {
-        const tempCart: {[id: number]: Obj} = cart;
+        const tempCart: {[id: number]: Obj} = {...cart};
         if (tempCart[id].quantity === 1){
             delete tempCart[id];
         } else {
