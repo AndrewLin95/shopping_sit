@@ -21,18 +21,16 @@ const Products:FC<Props> = ({ updateCart }) => {
 
     return (
         <div id='productPage'>
-            {
-                Object.entries(arrayofObjects).map(([key, value]) => {
-                    return(
-                        <div className='products' key={key}>
-                            <img className='productImg large' src={require(`Images/${value.img}`)} alt='product'></img>
-                            <div>{value.description}</div>
-                            <div>$ {value.price}</div>
-                            <button onClick={() => {updateCart(value.description, value.price, value.img, value.id)}}>Add to Cart</button>
-                        </div>
-                    )
-                })
-            }
+            {Object.entries(arrayofObjects).map(([key, value]) => {
+                return(
+                    <div className='products' key={key}>
+                        <img className='productImg large' src={require(`Images/${value.img}`)} alt='product'></img>
+                        <div>{value.description}</div>
+                        <div>$ {value.price}</div>
+                        <button onClick={() => {updateCart(value.description, value.price, value.img, value.id)}}>Add to Cart</button>
+                    </div>
+                )
+            })}
         </div>
     )
 }

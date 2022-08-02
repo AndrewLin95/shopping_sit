@@ -23,7 +23,7 @@ const RouteSwitch:FC = () => {
     const [price, usePrice] = useState<number>(0);
     const [totalQty, useTotalQty] = useState<number>(0);
 
-    // TODO: add total quantity. Home page. Animation or popup for when adding item to cart
+    // TODO: Home page. Animation or popup for when adding item to cart
 
     const updateCart = ( descriptionValue: string, priceValue: number, image: string, idValue: number ) => {
         const tempCart: {[id: number] : Obj} = cart;
@@ -50,15 +50,15 @@ const RouteSwitch:FC = () => {
         const tempCart: {[id: number]: Obj} = {...cart};
         const tempQty = totalQty;
         let tempPrice = price;
+        tempPrice -= tempCart[id].price
+        usePrice(Math.round(tempPrice*1000)/1000);
+        useTotalQty(tempQty - 1);
         if (tempCart[id].quantity === 1){
             delete tempCart[id];
         } else {
             tempCart[id].quantity --;
         }
-        tempPrice -= tempCart[id].price
-        usePrice(tempPrice);
         useCart(tempCart);
-        useTotalQty(tempQty - 1);
     }
 
     return (

@@ -12,7 +12,7 @@ interface Props{
    cart: Obj,
    price: number,
    totalQty: number,
-   removeItem: (arg1: number) => void
+   removeItem: (arg1: number) => void,
 }
 
 const Cart:FC<Props> = ({ cart, price, totalQty, removeItem }) => {
@@ -25,16 +25,16 @@ const Cart:FC<Props> = ({ cart, price, totalQty, removeItem }) => {
                 <div id='cartQuantityHeader'>Quantity</div>
             </div>
             {Object.entries(cart).map(([key, value]) => {
-                return(
-                    <div className='cart' key={key}>
-                        <img className='productImg small' src={require(`Images/${value.img}`)} alt='product'></img>
-                        <div className='cartDescription'>{value.description}</div>
-                        <div>$ {value.price}</div>
-                        <div>{value.quantity} </div>
-                        <button onClick={() => {removeItem(value.id)}}>Remove</button>
-                    </div>
-                )
-            })}
+                    return(
+                        <div className='cart' key={key}>
+                            <img className='productImg small' src={require(`Images/${value.img}`)} alt='product'></img>
+                            <div className='cartDescription'>{value.description}</div>
+                            <div>$ {value.price}</div>
+                            <div>{value.quantity} </div>
+                            <button onClick={() => {removeItem(value.id)}}>Remove</button>
+                        </div>
+                    )
+                })}
             <div id='cartSpacer'></div>
             <div id='cartTotalPrice'>
                 <div id='totalPriceText'>Total Price:</div>
