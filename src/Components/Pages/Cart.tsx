@@ -21,7 +21,7 @@ const Cart:FC<Props> = ({ cart, price, totalQty, removeItem }) => {
         return (
             <div id='cartPage'>
                 <img id="backgroundImg" src={require("Images/background.png")}></img>
-                <div>There is nothing here</div>
+                <div id='emptyCartTxt'>There is nothing here... Add something to your cart!</div>
             </div>
         )
     }

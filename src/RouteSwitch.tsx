@@ -1,8 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import React, { FC, useEffect, useState } from 'react';
+import { FC, useState } from 'react';
 import Home from "./Components/Pages/Home";
 import Products from "./Components/Pages/Products";
-import Contacts from "./Components/Pages/Contacts";
 import Cart from "./Components/Pages/Cart";
 import Header from "Components/Header";
 import Footer from "Components/Footer";
@@ -22,8 +21,6 @@ const RouteSwitch:FC = () => {
     const [cart, useCart] = useState<{[key: string]: Obj}>({});
     const [price, usePrice] = useState<number>(0);
     const [totalQty, useTotalQty] = useState<number>(0);
-
-    // TODO: Home page. Animation or popup for when adding item to cart
 
     const updateCart = ( descriptionValue: string, priceValue: number, image: string, idValue: number ) => {
         const tempCart: {[id: number] : Obj} = cart;

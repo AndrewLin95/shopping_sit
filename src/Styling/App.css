@@ -49,6 +49,12 @@ a, a:visited, a:active {
     font-size: 4em;
 }
 
+#attributeContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
+}
+
 .attribute{
     font-size: 0.8em;
 }
@@ -102,6 +108,12 @@ a, a:visited, a:active {
     gap: 0.5em;
     height: 82vh;
     overflow-y: auto;
+}
+
+#emptyCartTxt{
+    padding-top: 1em;
+    font-size: 1.3em;
+    text-align: center;
 }
 
 #cartHeader{

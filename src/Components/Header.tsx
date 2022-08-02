@@ -10,7 +10,6 @@ const Header = () => {
                     <Link className="navLinks" to="/shopping_site/products">Products</Link>
                     <Link className="navLinks" to="/shopping_site/cart">Shopping Cart</Link>
             </div>
-            
         </div>
     )
 }

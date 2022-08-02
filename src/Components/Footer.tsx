@@ -9,7 +9,7 @@ class Footer extends Component{
         return(
             <div id='footer'>
                 <a id='gitHubIcon' href='https://github.com/AndrewLin95/shopping_site' target="_blank" rel='noreferrer'>{githubIcon}</a>
-                <div>
+                <div id='attributeContainer'>
                     <div className='attribute'>Icons created by Freepik on Flaticon</div>
                     <div className='attribute'>Background created by @eberhardgross on unsplash.com</div>
                 </div>
