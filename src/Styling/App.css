@@ -205,6 +205,9 @@ a, a:visited, a:active {
     left: 0%;
     object-fit: cover;
     background-attachment: scroll;
+    background-position:center; 
+    background-size:cover; 
+    background-repeat:no-repeat;
     width: 100vw;
     height: 90vh;
     z-index: -5;
