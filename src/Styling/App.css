@@ -20,6 +20,17 @@ body{
     padding-right: 5vw;
 }
 
+#main{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+#landingTxt{
+    font-size: 3em;
+    padding-top: 6em;
+}
+
 #shopName{
     font-size: 3em;
     color: lightpink;
