@@ -9,6 +9,8 @@
 
 ##### Technologies
 
+- Typescript
+- React
 - HTML
 - CSS
 - JS
@@ -22,11 +24,10 @@
 
 ##### Concepts used
 
-- Use of webpack structures
-- Learned to use extensions (prettier and eslint)
-- Utilized of APIs, async/await functions and promises
-- Formatted times based off timezones
-- Npm used to build and deploy code to github pages
+- Familiarized myself with typing using Typescript
+- Better understanding of React functional components and using various hooks
+- Understanding of the intricacies of using Typescript and React together
+- Responsive design of page to accomodate desktop and mobile use of site
 
 # Getting Started with Create React App
 
