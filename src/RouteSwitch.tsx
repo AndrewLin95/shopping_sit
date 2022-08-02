@@ -66,9 +66,9 @@ const RouteSwitch:FC = () => {
             <BrowserRouter>
             <Header/>
                 <Routes> 
-                    <Route path="/" element={<Home/>} />
-                    <Route path="/products" element={<Products updateCart={updateCart}/>} />
-                    <Route path="/cart" element={<Cart cart={cart} price={price} totalQty={totalQty} removeItem={removeItem}/>}/>
+                    <Route path="/shopping_site/" element={<Home/>} />
+                    <Route path="/shopping_site/products" element={<Products updateCart={updateCart}/>} />
+                    <Route path="/shopping_site/cart" element={<Cart cart={cart} price={price} totalQty={totalQty} removeItem={removeItem}/>}/>
                 </Routes>
             <Footer/>
             </BrowserRouter>

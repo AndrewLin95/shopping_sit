@@ -6,9 +6,9 @@ const Header = () => {
             <div id="shopName">Candy Emporium +</div>
            
             <div id="navBar">
-                    <Link className="navLinks" to="/">Home</Link>
-                    <Link className="navLinks" to="/products">Products</Link>
-                    <Link className="navLinks" to="/cart">Shopping Cart</Link>
+                    <Link className="navLinks" to="/shopping_site/">Home</Link>
+                    <Link className="navLinks" to="/shopping_site/products">Products</Link>
+                    <Link className="navLinks" to="/shopping_site/cart">Shopping Cart</Link>
             </div>
             
         </div>
