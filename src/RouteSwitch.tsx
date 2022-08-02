@@ -21,12 +21,14 @@ const RouteSwitch:FC = () => {
 
     const [cart, useCart] = useState<{[key: string]: any}>({});
     const [price, usePrice] = useState<number>(0);
+    const [totalQty, useTotalQty] = useState<number>(0);
 
     // TODO: add total quantity. Home page. Animation or popup for when adding item to cart
 
     const updateCart = ( descriptionValue: string, priceValue: number, image: string, idValue: number ) => {
         const tempCart: {[id: number] : Obj} = cart;
         let tempPrice = price;
+        const tempQty = totalQty;
         if (idValue in tempCart){
             tempCart[idValue].quantity ++;
         } else {
@@ -41,22 +43,23 @@ const RouteSwitch:FC = () => {
         useCart(tempCart);
         tempPrice += priceValue;
         usePrice(Math.round(tempPrice*1000)/1000);
+        useTotalQty(tempQty + 1);
     }
 
     const removeItem = ( id: number ) => {
         const tempCart: {[id: number]: Obj} = {...cart};
+        const tempQty = totalQty;
+        let tempPrice = price;
         if (tempCart[id].quantity === 1){
             delete tempCart[id];
         } else {
             tempCart[id].quantity --;
         }
+        tempPrice -= tempCart[id].price
+        usePrice(tempPrice);
         useCart(tempCart);
+        useTotalQty(tempQty - 1);
     }
-
-    useEffect(()=>{
-        console.log(cart);
-        console.log(price);
-    }, [cart, price])
 
     return (
         <>
@@ -66,7 +69,7 @@ const RouteSwitch:FC = () => {
                     <Route path="/" element={<Home/>} />
                     <Route path="/products" element={<Products updateCart={updateCart}/>} />
                     <Route path="/contacts" element={<Contacts/>} />
-                    <Route path="/cart" element={<Cart cart={cart} price={price} removeItem={removeItem}/>}/>
+                    <Route path="/cart" element={<Cart cart={cart} price={price} totalQty={totalQty} removeItem={removeItem}/>}/>
                 </Routes>
             <Footer/>
             </BrowserRouter>

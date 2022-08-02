@@ -129,7 +129,17 @@ a, a:visited, a:active {
     justify-content: space-between;
 }
 
+#totalPriceText{
+    position: relative;
+    left: 8em;
+}
+
 #cartPriceValue{
     position: relative;
-    right: 9.8em;
+    left: 1.9em;
+}
+
+#totalQty{
+    position: relative;
+    right: 7.5em;
 }

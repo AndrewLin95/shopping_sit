@@ -11,10 +11,11 @@ interface Obj{
 interface Props{
    cart: Obj,
    price: number,
+   totalQty: number,
    removeItem: (arg1: number) => void
 }
 
-const Cart:FC<Props> = ({ cart, price, removeItem }) => {
+const Cart:FC<Props> = ({ cart, price, totalQty, removeItem }) => {
 
     return (
         <div id='cartPage'>
@@ -36,8 +37,9 @@ const Cart:FC<Props> = ({ cart, price, removeItem }) => {
             })}
             <div id='cartSpacer'></div>
             <div id='cartTotalPrice'>
-                <div>Total Price:</div>
+                <div id='totalPriceText'>Total Price:</div>
                 <div id='cartPriceValue'>$ {price}</div>
+                <div id='totalQty'>{totalQty}</div>
             </div>
         </div>
     )
