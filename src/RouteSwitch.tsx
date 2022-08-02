@@ -19,7 +19,7 @@ interface Obj{
 
 const RouteSwitch:FC = () => {
 
-    const [cart, useCart] = useState<{[key: string]: any}>({});
+    const [cart, useCart] = useState<{[key: string]: Obj}>({});
     const [price, usePrice] = useState<number>(0);
     const [totalQty, useTotalQty] = useState<number>(0);
 
@@ -77,4 +77,4 @@ const RouteSwitch:FC = () => {
     )
 }
 
-export default RouteSwitch;
+export default RouteSwitch
