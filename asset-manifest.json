@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/shopping_site/static/css/main.617b0200.css",
+    "main.js": "/shopping_site/static/js/main.b74a300c.js",
+    "static/media/candy2.png": "/shopping_site/static/media/candy2.60ca98797dab80bb79c8.png",
+    "static/media/donut.png": "/shopping_site/static/media/donut.e42728005409c249e7c1.png",
+    "static/media/candy.png": "/shopping_site/static/media/candy.1cfe798ba49f9592836e.png",
+    "static/media/macaron.png": "/shopping_site/static/media/macaron.d076324eecf3a678eff8.png",
+    "static/media/gingerbread.png": "/shopping_site/static/media/gingerbread.cc20de8a5615c64cca51.png",
+    "static/media/fondue.png": "/shopping_site/static/media/fondue.89b0250654a435c0a9f7.png",
+    "static/media/diamond.png": "/shopping_site/static/media/diamond.f5386086bb41115a9a55.png",
+    "static/media/lollipop.png": "/shopping_site/static/media/lollipop.5d69d9759a9a9e7b29ca.png",
+    "static/media/croissant.png": "/shopping_site/static/media/croissant.d39f8e9ef9de0870ce24.png",
+    "static/media/pudding.png": "/shopping_site/static/media/pudding.be7811f8f2e658c12f94.png",
+    "static/media/caramelized-apple.png": "/shopping_site/static/media/caramelized-apple.a9e85f63df7f9ba8b30c.png",
+    "static/media/chocolate-bar.png": "/shopping_site/static/media/chocolate-bar.a700c28d86bf561d4822.png",
+    "index.html": "/shopping_site/index.html",
+    "main.617b0200.css.map": "/shopping_site/static/css/main.617b0200.css.map",
+    "main.b74a300c.js.map": "/shopping_site/static/js/main.b74a300c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.617b0200.css",
+    "static/js/main.b74a300c.js"
+  ]
+}
