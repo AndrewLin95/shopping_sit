@@ -68,7 +68,6 @@ const RouteSwitch:FC = () => {
                 <Routes> 
                     <Route path="/" element={<Home/>} />
                     <Route path="/products" element={<Products updateCart={updateCart}/>} />
-                    <Route path="/contacts" element={<Contacts/>} />
                     <Route path="/cart" element={<Cart cart={cart} price={price} totalQty={totalQty} removeItem={removeItem}/>}/>
                 </Routes>
             <Footer/>

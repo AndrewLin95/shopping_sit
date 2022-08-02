@@ -46,7 +46,7 @@ const catalog = () => {
             },
             {
                 "id": 7,
-                "description": "Gingerbreadman",
+                "description": "Gingerbread man",
                 "price": 0.99,    
                 "img": "gingerbread.png"
             },

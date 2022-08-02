@@ -19,12 +19,16 @@ const Cart:FC<Props> = ({ cart, price, totalQty, removeItem }) => {
 
     if (totalQty === 0){
         return (
-            <div>There is nothing here</div>
+            <div id='cartPage'>
+                <img id="backgroundImg" src={require("Images/background.png")}></img>
+                <div>There is nothing here</div>
+            </div>
         )
     }
 
     return (
         <div id='cartPage'>
+            <img id="backgroundImg" src={require("Images/background.png")}></img>
             <div id='cartHeader'>
                 <div id='cartItemHeader'>Items</div>
                 <div id='cartPriceHeader'>Price</div>

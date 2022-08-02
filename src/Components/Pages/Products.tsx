@@ -21,12 +21,13 @@ const Products:FC<Props> = ({ updateCart }) => {
 
     return (
         <div id='productPage'>
+            <img id="backgroundImg" src={require("Images/background.png")}></img>
             {Object.entries(arrayofObjects).map(([key, value]) => {
                 return(
                     <div className='products' key={key}>
                         <img className='productImg large' src={require(`Images/${value.img}`)} alt='product'></img>
-                        <div>{value.description}</div>
-                        <div>$ {value.price}</div>
+                        <div className='productText'>{value.description}</div>
+                        <div className='productText'>$ {value.price}</div>
                         <button onClick={() => {updateCart(value.description, value.price, value.img, value.id)}}>Add to Cart</button>
                     </div>
                 )
