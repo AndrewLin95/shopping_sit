@@ -41,7 +41,7 @@ const Cart:FC<Props> = ({ cart, price, totalQty, removeItem }) => {
                         <div className='cartDescription'>{value.description}</div>
                         <div>$ {value.price}</div>
                         <div>{value.quantity} </div>
-                        <button onClick={() => {removeItem(value.id)}}>Remove</button>
+                        <button className='btn' onClick={() => {removeItem(value.id)}}>Remove</button>
                     </div>
                 )
             })}

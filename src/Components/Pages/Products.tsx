@@ -28,7 +28,7 @@ const Products:FC<Props> = ({ updateCart }) => {
                         <img className='productImg large' src={require(`Images/${value.img}`)} alt='product'></img>
                         <div className='productText'>{value.description}</div>
                         <div className='productText'>$ {value.price}</div>
-                        <button onClick={() => {updateCart(value.description, value.price, value.img, value.id)}}>Add to Cart</button>
+                        <button className='btn' onClick={() => {updateCart(value.description, value.price, value.img, value.id)}}>Add to Cart</button>
                     </div>
                 )
             })}

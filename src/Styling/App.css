@@ -83,6 +83,19 @@ a, a:visited, a:active {
     background: rgba(255, 255, 255, 0.2);
 }
 
+.btn{
+    border-radius: 10%;
+    border: 0px;
+    height: 1.4em;
+    background: rgba(255, 255, 255, 0.6);
+    transition: 0.5s;
+}
+
+.btn:active{
+    border: #BA7CF1 2px solid;
+    background: rgba(186, 124, 241, 0.4);
+}
+
 #cartPage{
     display: flex;
     flex-direction: column;
