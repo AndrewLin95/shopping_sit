@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/shopping_site/static/css/main.8420d857.css",
-    "main.js": "/shopping_site/static/js/main.d5fe8ad1.js",
+    "main.css": "/shopping_site/static/css/main.925afec4.css",
+    "main.js": "/shopping_site/static/js/main.891c52e8.js",
     "static/media/background.png": "/shopping_site/static/media/background.0c5f472426630d82d828.png",
     "static/media/candy2.png": "/shopping_site/static/media/candy2.60ca98797dab80bb79c8.png",
     "static/media/donut.png": "/shopping_site/static/media/donut.e42728005409c249e7c1.png",
@@ -16,11 +16,11 @@
     "static/media/caramelized-apple.png": "/shopping_site/static/media/caramelized-apple.a9e85f63df7f9ba8b30c.png",
     "static/media/chocolate-bar.png": "/shopping_site/static/media/chocolate-bar.a700c28d86bf561d4822.png",
     "index.html": "/shopping_site/index.html",
-    "main.8420d857.css.map": "/shopping_site/static/css/main.8420d857.css.map",
-    "main.d5fe8ad1.js.map": "/shopping_site/static/js/main.d5fe8ad1.js.map"
+    "main.925afec4.css.map": "/shopping_site/static/css/main.925afec4.css.map",
+    "main.891c52e8.js.map": "/shopping_site/static/js/main.891c52e8.js.map"
   },
   "entrypoints": [
-    "static/css/main.8420d857.css",
-    "static/js/main.d5fe8ad1.js"
+    "static/css/main.925afec4.css",
+    "static/js/main.891c52e8.js"
   ]
 }
